@@ -24,8 +24,12 @@ C:\Users\jonas\projects\DroneATC\bin\Debug\net9.0-windows\DroneATC.deps.json
 C:\Users\jonas\projects\DroneATC\bin\Debug\net9.0-windows\DroneATC.runtimeconfig.json
 C:\Users\jonas\projects\DroneATC\bin\Debug\net9.0-windows\DroneATC.dll
 C:\Users\jonas\projects\DroneATC\bin\Debug\net9.0-windows\DroneATC.pdb
+C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\MainWindow.g.cs
 C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\App.g.cs
 C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC_MarkupCompile.cache
+C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC_MarkupCompile.lref
+C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC.g.resources
 C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC.AssemblyInfoInputs.cache
 C:\Users\jonas\projects\DroneATC\obj\Debug\net9.0-windows\DroneATC.AssemblyInfo.cs
