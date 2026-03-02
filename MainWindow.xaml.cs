@@ -57,13 +57,11 @@ public partial class MainWindow : Window
 
         timer.Start();
 
-        List<Drone> Drones = new List<Drone>
+        List<Models.Drone> Drones = new List<Models.Drone>
         {
-            new Drone(1, 100, 100, 1000, 50),
-            new Drone(2, 200, 200, 1500, 60),
-            new Drone(3, 300, 300, 1200, 55)
+            new Models.Drone(1, 100, 100, 1000, 50),
+            new Models.Drone(2, 200, 200, 1500, 60),
+            new Models.Drone(3, 300, 300, 1200, 55)
         };
-
-        foreach (var Drone in Drones)
     }
 }

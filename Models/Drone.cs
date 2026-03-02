@@ -17,5 +17,7 @@ public class Drone
         Speed = speed;
     }
 
-    
+    // changing the drone's color based on its position
+
+
 }
