@@ -64,4 +64,22 @@ public partial class MainWindow : Window
             new Models.Drone(3, 300, 300, 1200, 55)
         };
     }
+
+    public void ClickEvent(object sender, RoutedEventArgs e)
+    {
+        //spawn a new drone at the click location
+        Point clickPosition = Mouse.GetPosition(this);
+        Rectangle newDrone = new Rectangle();
+
+        newDrone.Width = 20;
+        newDrone.Height = 20;
+
+        newDrone.Fill = Brushes.Black;
+
+        Canvas.SetLeft(newDrone, clickPosition.X);
+        Canvas.SetTop(newDrone, clickPosition.Y);
+
+        // Add the new drone to the canvas
+        ((Canvas)this.Content).Children.Add(newDrone);
+    }
 }
