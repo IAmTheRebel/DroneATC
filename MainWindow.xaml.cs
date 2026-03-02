@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.VisualBasic;
+using Microsoft.Windows.Themes;
 
 namespace DroneATC;
 
@@ -23,23 +25,45 @@ public partial class MainWindow : Window
 
         // Create a canvas sized to fill the window
         Canvas myCanvas = new Canvas();
-        myCanvas.Background = Brushes.LightSteelBlue;
-
-        // Add a "Hello World!" text element to the Canvas
-        TextBlock txt1 = new TextBlock();
-        txt1.FontSize = 14;
-        txt1.Text = "H";
-        Canvas.SetTop(txt1, 100);
-        Canvas.SetLeft(txt1, 10);
-        myCanvas.Children.Add(txt1);
-
-        // Add a second text element to show how absolute positioning works in a Canvas
-        TextBlock txt2 = new TextBlock();
-        txt2.FontSize = 22;
-        txt2.Text = "Isn't absolute positioning handy?";
-        Canvas.SetTop(txt2, 200);
-        Canvas.SetLeft(txt2, 75);
-        myCanvas.Children.Add(txt2);
+        myCanvas.Background = Brushes.LightGray;
         this.Content = myCanvas;
+
+        // Create a rectangle to represent a drone
+        Rectangle drone = new Rectangle(); 
+
+        drone.Width = 20;
+        drone.Height = 20;
+
+        drone.Fill = Brushes.Black;
+
+        // Position the drone on the canvas
+        Canvas.SetLeft(drone, 100);
+        Canvas.SetTop(drone, 100); 
+
+        // Add the drone to the canvas
+        myCanvas.Children.Add(drone);
+
+        //canvas update loop
+        System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+
+        timer.Interval = TimeSpan.FromMilliseconds(1); // Update every 1 ms
+
+        timer.Tick += (sender, e) =>
+        {
+            // Move the drone to the right
+            double currentLeft = Canvas.GetLeft(drone);
+            Canvas.SetLeft(drone, currentLeft + 1);
+        };
+
+        timer.Start();
+
+        List<Drone> Drones = new List<Drone>
+        {
+            new Drone(1, 100, 100, 1000, 50),
+            new Drone(2, 200, 200, 1500, 60),
+            new Drone(3, 300, 300, 1200, 55)
+        };
+
+        foreach (var Drone in Drones)
     }
 }
